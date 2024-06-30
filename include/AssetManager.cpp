@@ -1,6 +1,6 @@
 #include "AssetManager.hpp"
 
-namespace Game
+namespace Sonar
 {
   void AssetManager::LoadTexture(std::string name, std::string fileName) {
     sf::Texture tex;

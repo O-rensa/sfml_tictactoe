@@ -3,7 +3,7 @@
 #include <map>
 #include <SFML/Graphics.hpp>
 
-namespace Game {
+namespace Sonar {
   class AssetManager {
     private:
       std::map<std::string, sf::Texture> _textures;

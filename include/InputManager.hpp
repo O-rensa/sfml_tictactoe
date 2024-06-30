@@ -2,7 +2,7 @@
 
 #include <SFML/Graphics.hpp>
 
-namespace Game {
+namespace Sonar {
   class InputManager {
     public:
       InputManager() {}

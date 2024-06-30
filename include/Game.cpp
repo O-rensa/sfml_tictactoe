@@ -4,10 +4,8 @@
 
 namespace Sonar {
   Game::Game(int width, int height, std::string title) {
-    this->_data->machine.AddState(StateRef(new SplashState(this->_data)));
-
     this->_data->window.create(sf::VideoMode(width, height), title, sf::Style::Close | sf::Style::Titlebar);
-    
+    this->_data->machine.AddState(StateRef(new SplashState(this->_data)));
     this->Run();
   }
 

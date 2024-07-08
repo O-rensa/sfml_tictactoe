@@ -38,3 +38,6 @@
 #define X_WINNING_PIECE_FILEPATH "Resources/res/X Win.png"
 #define O_WINNING_PIECE_FILEPATH "Resources/res/O Win.png"
 #define RETRY_BUTTON "Resources/res/Retry Button.png"
+
+
+#define GRID_SPRITE_FILEPATH "Resources/res/Grid.png"

@@ -18,6 +18,7 @@ namespace Sonar {
       int gameState;
       
       void InitGridPieces();
+      void CheckAndPlacePiece();
 
     public:
       GameState(GameDataRef data);

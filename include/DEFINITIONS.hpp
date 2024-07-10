@@ -7,7 +7,7 @@
 #define O_PIECE 0
 #define EMPTY_PIECE -1
 #define PLAYER_PIECE X_PIECE
-#define AI_PIECE X_PIECE
+#define AI_PIECE O_PIECE
 
 
 #define STATE_PLAYING 98

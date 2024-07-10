@@ -30,7 +30,7 @@ namespace Sonar {
 
     for (int x = 0; x < 3; x++) {
       for (int y = 0; y < 3; y++) {
-        gridArray[x][y] = 0;
+        gridArray[x][y] = EMPTY_PIECE;
       }
     }
   }
@@ -95,7 +95,7 @@ namespace Sonar {
     } else if (gridLocalTouchPos.x < gridSize.width) {
       column = 3;
     }
-
+    
     if (gridLocalTouchPos.y < gridSectionSize.y) {
       row = 1;
     } else if (gridLocalTouchPos.y < gridSectionSize.y * 2) {
@@ -106,7 +106,7 @@ namespace Sonar {
     
     if (gridArray[column - 1][row - 1] == EMPTY_PIECE) {
       gridArray[column - 1][row -1] = turn;
-
+    
       if (PLAYER_PIECE == turn) {
         _gridPieces[column -1][row - 1].setTexture(this->_data->assets.GetTexture("X Piece"));
         turn = AI_PIECE;
@@ -114,7 +114,7 @@ namespace Sonar {
         _gridPieces[column -1][row - 1].setTexture(this->_data->assets.GetTexture("O Piece"));
         turn = PLAYER_PIECE;
       }
-
+    
       _gridPieces[column - 1][row - 1].setColor(sf::Color(255, 255, 255, 255));
     }
   }

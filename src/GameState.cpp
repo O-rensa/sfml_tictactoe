@@ -43,6 +43,7 @@ namespace Sonar {
     sf::Event event;
     while (this->_data->window.pollEvent(event)) {
       if (sf::Event::Closed == event.type){
+    
         this->_data->window.close();
       }
       
@@ -58,7 +59,11 @@ namespace Sonar {
   }
 
   void GameState::Update(float dt) {
-    
+    if (STATE_DRAW == gameState || STATE_LOSE == gameState || STATE_WON == gameState) {
+      if (this->_clock.getElapsedTime().asSeconds() > TIME_BEFORE_SHOWING_GAME_OVER) {
+        this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
+      }
+    }
   }
 
   void GameState::Draw(float dt) {
@@ -164,7 +169,7 @@ namespace Sonar {
     }
 
     if (STATE_DRAW || STATE_LOSE == gameState || STATE_WON == gameState) {
-      // show game over
+      this->_clock.restart();
     }
 
     std::cout << gameState << std::endl;

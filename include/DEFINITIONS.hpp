@@ -41,3 +41,5 @@
 
 
 #define GRID_SPRITE_FILEPATH "Resources/res/Grid.png"
+
+#define TIME_BEFORE_SHOWING_GAME_OVER 3

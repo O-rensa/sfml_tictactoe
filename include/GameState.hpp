@@ -18,6 +18,7 @@ namespace Sonar {
       int turn;
       int gameState;
       AI* ai;
+      sf::Clock _clock;
       
       void InitGridPieces();
       void CheckAndPlacePiece();

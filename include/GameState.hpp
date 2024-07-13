@@ -4,6 +4,7 @@
 
 #include "State.hpp"
 #include "Game.hpp"
+#include "AI.hpp"
 
 namespace Sonar {
   class GameState : public State {
@@ -16,6 +17,7 @@ namespace Sonar {
       int gridArray[3][3];
       int turn;
       int gameState;
+      AI* ai;
       
       void InitGridPieces();
       void CheckAndPlacePiece();

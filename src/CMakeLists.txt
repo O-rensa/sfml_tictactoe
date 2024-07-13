@@ -8,6 +8,7 @@ set(src_files
   GameState.cpp
   PauseState.cpp
   GameOverState.cpp
+  AI.cpp
 )
 
 add_library(srclib
